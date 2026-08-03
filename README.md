@@ -7,7 +7,7 @@
 
 ## Demo Video
 
-🎥 [Watch Demo Video]()
+🎥 [Watch Demo Video](https://youtu.be/Hq-BgjvUcZQ)
 
 ## Summary
 
@@ -30,6 +30,9 @@ MapleTech Solutions needed guardrails to stop developers from deploying resource
 - **Effect**: Deny
 - **What it does**: Prevents creation of any Public IP address resource in the resource group, whether created directly or as a dependency of another resource (e.g. a VM).
 - **Mechanism**: Matches on resource `type` equal to `Microsoft.Network/publicIPAddresses` and denies unconditionally.
+
+
+## Challenges and Lessons Learned
 
 - **Policy propagation delay**: After assigning the initiative, enforcement did not take effect immediately. Azure Policy assignments can take up to 15–30 minutes to fully propagate before deny rules reliably apply, which initially made it look like the policies weren't working.
 
