@@ -1,0 +1,54 @@
+{
+  "properties": {
+    "displayName": "Only-CanadaCentral",
+    "policyType": "Custom",
+    "mode": "All",
+    "description": "",
+    "metadata": {
+      "category": "",
+      "createdBy": "a6324f5c-a345-4d0f-8d7b-b06a71923c28",
+      "createdOn": "2026-07-31T19:17:49.2729255Z",
+      "updatedBy": "a6324f5c-a345-4d0f-8d7b-b06a71923c28",
+      "updatedOn": "2026-07-31T19:20:17.0635443Z"
+    },
+    "version": "1.0.0",
+    "parameters": {
+      "allowedLocations": {
+        "type": "Array",
+        "metadata": {
+          "description": "The list of allowed locations for resources.",
+          "displayName": "Allowed locations",
+          "strongType": "location"
+        },
+        "defaultValue": [
+          "canadacentral"
+        ]
+      }
+    },
+    "policyRule": {
+      "if": {
+        "not": {
+          "field": "location",
+          "in": "[parameters('allowedLocations')]"
+        }
+      },
+      "then": {
+        "effect": "deny"
+      }
+    },
+    "versions": [
+      "1.0.0"
+    ]
+  },
+  "id": "/subscriptions/b08d8729-9b0d-47c1-a751-5ac9dd27a942/providers/Microsoft.Authorization/policyDefinitions/4bad6199feff531399242bab",
+  "type": "Microsoft.Authorization/policyDefinitions",
+  "name": "4bad6199feff531399242bab",
+  "systemData": {
+    "createdBy": "sidh0109@algonquinlive.com",
+    "createdByType": "User",
+    "createdAt": "2026-07-31T19:17:49.2568316Z",
+    "lastModifiedBy": "sidh0109@algonquinlive.com",
+    "lastModifiedByType": "User",
+    "lastModifiedAt": "2026-07-31T19:20:17.0425975Z"
+  }
+}

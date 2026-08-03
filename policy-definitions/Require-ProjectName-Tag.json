@@ -1,0 +1,40 @@
+{
+  "properties": {
+    "displayName": "Require-ProjectName-Tag",
+    "policyType": "Custom",
+    "mode": "Indexed",
+    "description": "",
+    "metadata": {
+      "category": "",
+      "createdBy": "a6324f5c-a345-4d0f-8d7b-b06a71923c28",
+      "createdOn": "2026-07-31T19:23:03.734898Z",
+      "updatedBy": null,
+      "updatedOn": null
+    },
+    "version": "1.0.0",
+    "parameters": {},
+    "policyRule": {
+      "if": {
+        "field": "tags['ProjectName']",
+        "exists": "false"
+      },
+      "then": {
+        "effect": "deny"
+      }
+    },
+    "versions": [
+      "1.0.0"
+    ]
+  },
+  "id": "/subscriptions/b08d8729-9b0d-47c1-a751-5ac9dd27a942/providers/Microsoft.Authorization/policyDefinitions/6506fa45803752c782c2a539",
+  "type": "Microsoft.Authorization/policyDefinitions",
+  "name": "6506fa45803752c782c2a539",
+  "systemData": {
+    "createdBy": "sidh0109@algonquinlive.com",
+    "createdByType": "User",
+    "createdAt": "2026-07-31T19:23:03.7142435Z",
+    "lastModifiedBy": "sidh0109@algonquinlive.com",
+    "lastModifiedByType": "User",
+    "lastModifiedAt": "2026-07-31T19:23:03.7142435Z"
+  }
+}
